@@ -2,8 +2,6 @@
 <script>
 var myObj, i, j, x = "";
 myObj = {
-    "name":"John",
-    "age":30,
     "cars": [
         { "name":"Ford", "models":[ "Fiesta", "Focus", "Mustang" ] },
         { "name":"BMW", "models":[ "320", "X3", "X6" ] },
@@ -11,9 +9,9 @@ myObj = {
     ]
 }
 for (i in myObj.cars) {
-    x += "<h2>" + myObj.cars[i].name + "</h2>";
+    x += "<h3>" + myObj.cars[i].name + "</h3>";
     for (j in myObj.cars[i].models) {
-        x += myObj.cars[i].models[j] + "<br>";
+        x += "<p>" + myObj.cars[i].models[j] + "</p>";
     }
 }
 document.getElementById("demo").innerHTML = x;
